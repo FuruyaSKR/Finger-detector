@@ -13,7 +13,6 @@ with mp_hands.Hands(
     static_image_mode = False, # Falso por que é um video
     max_num_hands = 2, # Número max de mãos detectadas 
     min_detection_confidence = 0.5) as hands:
-    # TODO Essa linha cria um objeto Hands para detectar as mãos na imagem.
 
     # Loop infinito para capturar imagens da webcam
     while True:
@@ -32,7 +31,7 @@ with mp_hands.Hands(
         # Processa a imagem para detectar as mãos
         results = hands.process(frame_rgb)
 
-        if results.multi_hand_landmarks is not None
+        if results.multi_hand_landmarks is not None:
 
             # Define a cor das conexões das linhas e a cor dos círculos na detecção.
             for hand_landmarks in results.multi_hand_landmarks:
